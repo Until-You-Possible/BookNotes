@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Border</title>
+    <style>
+        body {
+            background: #ccc;
+        }
+        .publicStyle {
+            height: 100px;
+            width: 200px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        .borderContainer {
+            text-align: center;
+            border: 10px solid hsla(0, 0%, 100%, .5);
+            background: white;
+            background-clip: padding-box;
+        }
+        .borderContainer2 {
+            margin-top: 30px;
+            background: white;
+            box-shadow: 0 0 0 10px #655,
+                        0 0 0 15px deeppink,
+                        0 2px 5px 15px rgba(0,0,0,.6);
+
+        }
+        .borderContainer3 {
+            margin-top: 30px;
+            background: #333;
+            border-radius: 2px;
+            border: 1px dashed #fff;
+            outline: 10px solid #333;
+            /*outline-offset: 10px;*/
+        }
+    </style>
+</head>
+<body>
+<!--   问题一：假设我们想给一个容器设置一层白色的背景和一道半透明的白色边框，body的背景会从它的半透明边框上透上来，如何实现？-->
+   <div class="publicStyle borderContainer">THIS IS THE TEST BOX 1</div>
+
+<!--关于 rgba 和 hsla-->
+<!--rgba就不赘述了-->
+<!--hsla()函数使用色相。饱和度，亮度，透明度来定义颜色  (hue， saturation，light)-->
+
+<!--box-shadow实现边框-->
+
+<div class="publicStyle borderContainer2">THIS IS THE TEST BOX 2</div>
+
+<!--outline实现border-->
+
+<div class="publicStyle borderContainer3">THIS IS THE TEST BOX 3</div>
+
+<!--对于不同的实现， 在实际中是由不同场景的。比如box-shadow实现，是不占其他空间的，具体要看场景来决定-->
+
+
+
+
+</body>
+</html>
