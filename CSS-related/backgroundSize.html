@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>backgroundSize</title>
+    <style>
+        body {
+            display: flex;
+            /*align-items: center;*/
+            width: 100%;
+            justify-content: flex-start;
+        }
+        .publicStyle {
+            width: 200px;
+            height: 100px;
+            margin-right: 20px;
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            margin-bottom: 20px;
+        }
+        .containerSize1 {
+            background: linear-gradient(#fb23, #58a);
+        }
+        /*拉近一点渐变色*/
+        /*百分比代表在容器高度的百分之多少去显示*/
+        .containerSize2 {
+            background: linear-gradient(#fb23 20%, #58a 60%);
+        }
+        /*各百分之五十的话那么 根据上面的结论就是平分了*/
+        .containerSize3 {
+            background: linear-gradient(#fb23 50%, #58a 50%);
+        }
+        /*为什么可以使用background-size来限制*/
+        /*因为渐变是由代码生成的图像*/
+        .containerSize4 {
+            background: linear-gradient(#fb23 50%, #58a 50%);
+            background-size: 100% 30px;
+        }
+        /*创建多种颜色*/
+        .containerSize5 {
+            background: linear-gradient(#5588aa 33%, #fba 0, #000 66%, lightblue 0);
+            background-size: 100% 45px;
+        }
+        /*垂直条纹*/
+        /*两种方式*/
+        .containerSize6 {
+            /*background: linear-gradient( to right, #fb23 50%, #58a 50%);*/
+            background: linear-gradient(90deg, #fb23 50%, #58a 50%);
+            background-size: 100% 30px;
+        }
+        /*关于一些复杂的背景图案*/
+        .containerSize7 {
+            background: white;
+            background: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0),
+                        linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+            background-size: 30px 30px;
+        }
+        /*波点图*/
+        .containerSize8 {
+            background-color: #655;
+            background-size: 30px 30px;
+            background-position:0 0, 15px 15px;
+            background-image: radial-gradient(tan 30%, transparent 0),
+                        radial-gradient(tan 30%, transparent 0);
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="publicStyle containerSize1">THIS IS TEST BOXES</div>
+<div class="publicStyle containerSize2">THIS IS TEST BOXES</div>
+<div class="publicStyle containerSize3">THIS IS TEST BOXES</div>
+<div class="publicStyle containerSize4">THIS IS TEST BOXES</div>
+<div class="publicStyle containerSize5">THIS IS TEST BOXES</div>
+<div class="publicStyle containerSize6">THIS IS TEST BOXES</div>
+<!--<br>-->
+<div class="publicStyle containerSize7"></div>
+<div class="publicStyle containerSize8"></div>
+
+
+
+</body>
+</html>
