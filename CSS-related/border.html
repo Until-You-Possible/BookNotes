@@ -9,12 +9,16 @@
     <style>
         body {
             background: #ccc;
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            flex-wrap: wrap;
         }
         .publicStyle {
             height: 100px;
             width: 200px;
+            margin-right: 20px;
             padding: 10px;
-            margin: 0 auto;
         }
         .borderContainer {
             text-align: center;
@@ -38,6 +42,57 @@
             outline: 10px solid #333;
             /*outline-offset: 10px;*/
         }
+        .borderContainer4 {
+            border: 20px solid transparent;
+            border-image: 33.334% url('data:image/svg+xml,<svg xmlns="http:%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="30"> \
+	                      <circle cx="5" cy="5" r="5" fill="%23ab4"%2F><circle cx="15" cy="5" r="5" fill=" %23655"%2F> \
+	                      <circle cx="25" cy="5" r="5" fill="%23e07"%2F><circle cx="5" cy="15" r="5" fill=" %23655"%2F> \
+	                      <circle cx="15" cy="15" r="5" fill="hsl(15, 25%, 75%)"%2F> \
+	                      <circle cx="25" cy="15" r="5" fill=" %23655"%2F><circle cx="5" cy="25" r="5" fill="%23fb3"%2F> \
+	                      <circle cx="15" cy="25" r="5" fill=" %23655"%2F><circle cx="25" cy="25" r="5" fill="%2358a"%2F><%2Fsvg>');
+            padding: 1em;
+            max-width: 20em;
+            font: 130%/1.6 Baskerville, Palatino, serif;
+        }
+        .borderContainer5 {
+            margin-top: 1em;
+            border-image-repeat: round;
+        }
+
+        .borderContainer6 {
+            border: 1em solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            url(./img/stone-art.jpeg) border-box  0 / cover;
+
+            /* Styling & enable resize */
+            width: 21em;
+            padding: 1em;
+            overflow: hidden;
+            resize: both;
+            font: 100%/1.6 Baskerville, Palatino, serif;
+        }
+        .borderContainer7 {
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%,
+                    #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 6em 6em;
+
+            width: 20em;
+            font: 100%/1.6 Baskerville, Palatino, serif;
+        }
+        .borderContainer8 {
+            padding: 1em;
+            border: 1px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+            animation: ants 12s linear infinite;
+
+            max-width: 20em;
+            font: 100%/1.6 Baskerville, Palatino, serif;
+        }
+        @keyframes ants { to { background-position: 100% 100% } }
+
     </style>
 </head>
 <body>
@@ -57,6 +112,16 @@
 <div class="publicStyle borderContainer3">THIS IS THE TEST BOX 3</div>
 
 <!--对于不同的实现， 在实际中是由不同场景的。比如box-shadow实现，是不占其他空间的，具体要看场景来决定-->
+
+<!--其他一些有意思的border-image实现-->
+
+
+<div class="publicStyle borderContainer4">THIS IS THE TEST BOX 4</div>
+<div class="publicStyle borderContainer4 borderContainer5">THIS IS THE TEST BOX 5</div>
+
+<div class="borderContainer6">THIS IS THE TEST BOX 6</div>
+<div class="borderContainer7">THIS IS THE TEST BOX 7</div>
+<div class="borderContainer8">THIS IS THE TEST BOX 8</div>
 
 
 
